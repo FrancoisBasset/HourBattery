@@ -2,6 +2,11 @@
 	"name": "hourbattery",
 	"main": "app/app.js",
 	"version": "0.0.1",
+	"scripts": {
+		"genkey": "keytool -genkey -keystore keystore -alias key -keyalg RSA",
+		"build": "ns build android --release --aab --key-store-path keystore --key-store-password hourbattery --key-store-alias key --key-store-alias-password hourbattery",
+		"package": "java -jar bundletool.jar build-apks --bundle app-release.aab --output HourBattery.apks --ks=keystore --ks-pass=pass:hourbattery --ks-key-alias=key --key-pass=pass:hourbattery"
+	},
 	"dependencies": {
 		"@nativescript/core": "~8.5.0",
 		"@nativescript/theme": "~3.0.2",

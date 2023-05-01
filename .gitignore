@@ -2,3 +2,10 @@ hooks/
 node_modules/
 platforms/
 package-lock.json
+bundletool.jar
+keystore
+app-release.aab
+HourBattery.apks
+toc.pb
+splits/
+standalones/
